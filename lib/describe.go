@@ -1,34 +1,19 @@
 package awspm
 
 import (
-  "os/user"
+  "os"
   "fmt"
   "github.com/codegangsta/cli"
-  "github.com/vaughan0/go-ini"
-  "path/filepath"
-  "strings"
 )
 
-func describe(c *cli.Context) {
-  Debugln("reading file ~/.aws/config")
-  usr, _ := user.Current()
-  path, pathError := filepath.Abs(fmt.Sprintf("%v/.aws/config", usr.HomeDir))
-  Debugf("Error %v", pathError)
-  config, iniError := ini.LoadFile(path)
-  Debugf("Error %v", iniError)
+const AWS_DEFAULT_PROFILE = "AWS_DEFAULT_PROFILE"
 
-  for name, section := range config {
-    fmt.Printf("Section name: %s\n", name)
-    if len(c.String("name")) == 0 {
-      Debugf("Found section: %v", name)
-      for key, value := range section {
-        Debugf("%v: %v\n", key, value)
-      }
-    } else if strings.Contains(name, c.String("name")) {
-      Debugf("Found section: %v", name)
-      for key, value := range section {
-        Debugf("%v: %v\n", key, value)
-      }
-    }
+func DescribeActiveProfile(c *cli.Context) {
+  Debugln("reading variable AWS_DEFAULT_PROFILE")
+  profile := os.Getenv(AWS_DEFAULT_PROFILE)
+  if len(profile) > 0 {
+    fmt.Printf("current profile is %s\n", profile)
+  } else {
+    fmt.Println("there is currently no active profile")
   }
 }

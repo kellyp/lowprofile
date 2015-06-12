@@ -8,7 +8,7 @@ import (
 
 func main() {
   app := cli.NewApp()
-  app.Name = "awspm"
+  app.Name = "low-profile"
   app.Usage = "do work"
   app.Version = "0.0.1"
 
@@ -28,17 +28,26 @@ func main() {
 
   app.Commands = []cli.Command{
     {
-      Name:      "describe-profiles",
+      Name:      "describe-active-profile",
       Aliases:   []string{"a"},
-      Usage:     `Describes one or more of the profiles defined in your
-      ~/.aws/config file.`,
-      Action: func(c *cli.Context) {
-
-      },
+      Usage:     `Describes the currently active AWS profile`,
+      Action: awspm.DescribeActiveProfile,
+      // Flags: []cli.Flag {
+      //   cli.StringFlag{
+      //     Name: "name",
+      //     Usage: "name of the profile to describe",
+      //   },
+      // },
+    },
+    {
+      Name:      "activate-profile",
+      Aliases:   []string{"ap"},
+      Usage:     `Sets the currently active profile`,
+      Action:    awspm.ActivateProfile,
       Flags: []cli.Flag {
         cli.StringFlag{
-          Name: "name",
-          Usage: "name of the profile to describe",
+          Name: "profile",
+          Usage: "name of the profile to activate",
         },
       },
     },
