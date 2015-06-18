@@ -1,0 +1,5 @@
+
+low-profile(){
+	awspm "$@"
+	exec $SHELL
+}

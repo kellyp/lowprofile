@@ -3,7 +3,7 @@ package main
 import (
   "os"
   "github.com/codegangsta/cli"
-  "github.com/kellyp/awspm/lib"
+  "github.com/kellyp/awspm/awspm"
 )
 
 func main() {
@@ -28,16 +28,16 @@ func main() {
 
   app.Commands = []cli.Command{
     {
+      Name:      "describe-profiles",
+      Aliases:   []string{"d"},
+      Usage:     `Describes the list of AWS profile`,
+      Action: awspm.DescribeProfiles,
+    },
+    {
       Name:      "describe-active-profile",
-      Aliases:   []string{"a"},
+      Aliases:   []string{"dap"},
       Usage:     `Describes the currently active AWS profile`,
       Action: awspm.DescribeActiveProfile,
-      // Flags: []cli.Flag {
-      //   cli.StringFlag{
-      //     Name: "name",
-      //     Usage: "name of the profile to describe",
-      //   },
-      // },
     },
     {
       Name:      "activate-profile",
@@ -50,6 +50,12 @@ func main() {
           Usage: "name of the profile to activate",
         },
       },
+    },
+    {
+      Name:      "deactive-profile",
+      Aliases:   []string{"dp"},
+      Usage:     `Deactivate the currently active AWS profile`,
+      Action: awspm.DeactivateProfile,
     },
     // {
     //   Name:      "template",

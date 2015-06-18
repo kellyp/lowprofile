@@ -5,7 +5,7 @@ accounts.  That's why we've come up with a really simple tool for management of 
 
 ## Source
 
-The project is host on [Github](project link) and is written in [Go](https://golang.org).  Using Go gave me a great reason to dig in and start using Go.
+The project is hosted on [Github](project link) and is written in [Go](https://golang.org).  Using Go gave me a great reason to dig in and start using Go.
 
 ## Installation
 
@@ -31,10 +31,14 @@ Default output format [None]: json
 
 ### Activate
 
-Now that Low Profile is installed and you have a default AWS profile congfigured, you can now activate-profile, describe-active-profile and deactivate-profile the currently active  profile.  
+Now that Low Profile is installed and you have a default AWS profile congfigured, you can now describe-profiles, activate-profile, describe-active-profile and deactivate-profile the currently active  profile.  
 
 
 ```bash
+$ low-profile describe-profiles
+default
+different-profile
+
 $ low-profile describe-active-profile
 
 $ low-profile activate-profile --profile default

@@ -11,10 +11,7 @@ import (
   "strings"
 )
 
-const zsh  = "zsh"
-const zshrc = "~/.zshrc"
-const bash = "bash"
-const profileVariable = "AWS_DEFAULT_PROFILE"
+
 
 func ActivateProfile(c *cli.Context) {
   Debugln("checking shell")
@@ -22,21 +19,24 @@ func ActivateProfile(c *cli.Context) {
   Debugf("the shell is %s", shell)
   profile := c.String("profile")
 
+  var filename string
   if strings.Contains(shell, zsh) {
     Debugln("checking for variable in ~/.zshrc")
-    filename, err := tilde.Expand(zshrc)
-    if err != nil {
-        log.Fatal(err)
-    }
-    found, lines := scanFileForVariable(filename, profileVariable, profile)
-    if found {
-      writeFile(filename, lines)
-    }
-
+    filename = zshrc
   } else if strings.Contains(shell, bash) {
-
+    Debugln("checking for variable in ~/.bash_profile")
+    filename = bash_profile
   } else {
-    fmt.Printf("Sorry, %s is not supported", shell)
+    log.Fatalf("Sorry, %s is not supported", shell)
+  }
+
+  filename, err := tilde.Expand(filename)
+  if err != nil {
+      log.Fatal(err)
+  }
+  found, lines := scanFileForVariable(filename, profileVariable, profile)
+  if found {
+    writeFile(filename, lines)
   }
 }
 
@@ -50,8 +50,7 @@ func scanFileForVariable(filename string, variable string, profile string) (bool
 
   var lines []string
   found := false
-  Debugln(fmt.Sprintf("(export\\s+%s=)\\w*", variable))
-  regex := regexp.MustCompile(fmt.Sprintf("(export\\s+%s=)\\w*", variable))
+  regex := regexp.MustCompile(fmt.Sprintf("\\#*\\s*(export\\s+%s=)\\w*", variable))
   replace := fmt.Sprintf("${1}%s", profile)
   scanner := bufio.NewScanner(file)
   for scanner.Scan() {
@@ -71,21 +70,4 @@ func scanFileForVariable(filename string, variable string, profile string) (bool
 
 
   return found, lines
-}
-
-func writeFile(filename string, lines []string) {
-  file, err := os.OpenFile(filename, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0644)
-  if err != nil {
-      log.Fatal(err)
-  }
-  defer file.Close()
-  Debugf("Writing to file %s", filename)
-
-  w := bufio.NewWriter(file)
-  for index := range lines {
-    Debugf("Writing: %s", lines[index])
-    fmt.Fprintln(w, lines[index])
-  }
-
-	w.Flush() // Don't forget to flush!
 }
