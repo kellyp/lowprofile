@@ -1,5 +1,5 @@
 
 low-profile(){
-	awspm "$@"
+	low-profile-0.1 "$@"
 	exec $SHELL
 }

@@ -10,7 +10,7 @@ func main() {
   app := cli.NewApp()
   app.Name = "low-profile"
   app.Usage = "do work"
-  app.Version = "0.0.1"
+  app.Version = "0.1"
 
   app.Flags = []cli.Flag {
     cli.BoolFlag{
