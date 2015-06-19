@@ -11,20 +11,50 @@ The project is hosted on [Github](project link) and is written in [Go](https://g
 
 Installation is super simple, we are using [Brew](http://brew.sh) on OS X.
 
+NOTE: While in development the Low Profile Brew formula is being hosted outside of the Brew project.
+
 ```bash
 $ brew update
-$ brew install low-profile
+$ brew install https://s3-us-west-2.amazonaws.com/performance-tires/brew/latest/low-profile.rb
+```
+
+After the brew install finishes you will be advised to update your zshrc or bash_profile with the following:
+
+```bash
+
+  . /usr/local/Cellar/low-profile/0.1/bin/function
+
+```
+
+which for example can done without editing the .zshrc file with the following:
+
+```bash
+
+echo ". /usr/local/Cellar/low-profile/0.1/bin/function" >> ~/.zshrc
+
+```
+
+you can also add the `AWS_DEFAULT_PROFILE` variable to your environment file if it
+isn't there already (low-profile will do this automatically the first time you activate
+a profile).
+
+```bash
+
+echo "export AWS_DEFAULT_PROFILE=default" >> ~/.zshrc
+
 ```
 
 As always you can use the [AWS cli](http://aws.amazon.com/cli/) to add or update profiles.  
 
 ```bash
+
 $ aws configure
 
 AWS Access Key ID [None]: lettersandnumbers
 AWS Secret Access Key [None]: morelettersandnumbers
 Default region name [None]: us-west-2
 Default output format [None]: json
+
 ```
 
 ## Usage
@@ -61,7 +91,7 @@ there is currently no active profile
 
 ```
 
-### Prompt
+### Prompt v2
 
 As you can see low-profile makes it super easy to manage profiles from the command line.  But that's not all, as an added bonus we are adding prompt support.  So you can see your current AWS profile in your prompt.  Simply use Low Profile to update the prompt for you.  
 
