@@ -35,9 +35,11 @@ func ActivateProfile(c *cli.Context) {
       log.Fatal(err)
   }
   found, lines := scanFileForVariable(filename, profileVariable, profile)
-  if found {
-    writeFile(filename, lines)
+  if !found {
+    lines = append(lines, fmt.Sprintf("export %s=%s", profileVariable, profile))
   }
+
+  writeFile(filename, lines)
 }
 
 func scanFileForVariable(filename string, variable string, profile string) (bool, []string) {
