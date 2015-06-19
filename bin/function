@@ -1,5 +1,11 @@
 
 low-profile(){
+	# reset to zero
+	unset AWS_DEFAULT_PROFILE
+
+	# run the magic command
 	low-profile-0.1 "$@"
+
+	# refresh the shell
 	exec $SHELL
 }
