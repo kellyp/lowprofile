@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - 1.4.2
+
+install:
+  - go get github.com/codegangsta/cli
+  - go get gopkg.in/mattes/go-expand-tilde.v1
+  - go get github.com/vaughan0/go-ini
