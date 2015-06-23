@@ -22,7 +22,7 @@ After the brew install finishes you will be advised to update your zshrc or bash
 
 ```bash
 
-  . /usr/local/Cellar/low-profile/0.1/bin/function
+  . /usr/local/etc/low-profile/low-profile
 
 ```
 
@@ -30,7 +30,7 @@ which for example can done without editing the .zshrc file with the following:
 
 ```bash
 
-echo ". /usr/local/Cellar/low-profile/0.1/bin/function" >> ~/.zshrc
+echo ". /usr/local/etc/low-profile/low-profile" >> ~/.zshrc
 
 ```
 

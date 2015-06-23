@@ -17,7 +17,7 @@ class LowProfile < Formula
   def caveats; <<-EOS.undent
     Add the following to your bash_profile or zshrc to complete the install:
 
-      . #{HOMEBREW_PREFIX}/Cellar/low-profile/0.1/bin/function
+      . /usr/local/etc/low-profile/low-profile
 
     and source the file to pick up the change.
 
