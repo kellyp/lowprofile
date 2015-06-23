@@ -10,6 +10,14 @@ low-profile(){
 	fi
 
 	# refresh the shell
-	exec $SHELL
+	if [ "$SHELL" = "/bin/bash" ] ; then
+		login="--login"
+	fi
+	exec $SHELL $login
+
 
 }
+
+if [ "$SHELL" = "/bin/bash" ] ; then
+	export -f low-profile
+fi
