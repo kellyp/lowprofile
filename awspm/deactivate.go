@@ -18,20 +18,24 @@ func DeactivateProfile(c *cli.Context) {
   Debugf("the shell is %s", shell)
   profile := c.String("profile")
 
+  var filename string
   if strings.Contains(shell, zsh) {
     Debugln("checking for variable in ~/.zshrc")
-    filename, err := tilde.Expand(zshrc)
-    if err != nil {
-        log.Fatal(err)
-    }
-    found, lines := scanFileForVariableAndComment(filename, profileVariable, profile)
-    if found {
-      writeFile(filename, lines)
-    }
+    filename = zshrc
   } else if strings.Contains(shell, bash) {
-
+    Debugln("checking for variable in ~/.bash_profile")
+    filename = bash_profile
   } else {
-    fmt.Printf("Sorry, %s is not supported", shell)
+    log.Fatalf("Sorry, %s is not supported", shell)
+  }
+
+  filename, err := tilde.Expand(filename)
+  if err != nil {
+      log.Fatal(err)
+  }
+  found, lines := scanFileForVariableAndComment(filename, profileVariable, profile)
+  if found {
+    writeFile(filename, lines)
   }
 }
 

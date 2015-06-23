@@ -52,7 +52,7 @@ func scanFileForVariable(filename string, variable string, profile string) (bool
 
   var lines []string
   found := false
-  regex := regexp.MustCompile(fmt.Sprintf("\\#*\\s*(export\\s+%s=)\\w*", variable))
+  regex := regexp.MustCompile(fmt.Sprintf("\\#*\\s*(export\\s+%s=).*", variable))
   replace := fmt.Sprintf("${1}%s", profile)
   scanner := bufio.NewScanner(file)
   for scanner.Scan() {
