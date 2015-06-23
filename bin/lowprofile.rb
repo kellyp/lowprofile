@@ -1,12 +1,12 @@
 # Documentation: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md
 #                /usr/local/Library/Contributions/example-formula.rb
 
-class LowProfile < Formula
+class Lowprofile < Formula
   desc ""
   homepage ""
   url "https://s3-us-west-2.amazonaws.com/performance-tires/releases/latest/lowprofile-0.1.tar.gz"
   version "0.1"
-  sha256 "ea4529397597dc8989d236b044feaf2a9812574f5e9f1da81ba1cac5b94212ad"
+  sha256 "04f2ddc25269fcae2bd6b4d76421c11672652733f4a1174d5b7cbc85f232fbd5"
 
 
   def install

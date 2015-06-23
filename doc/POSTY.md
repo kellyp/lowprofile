@@ -30,7 +30,7 @@ which for example can done without editing the .zshrc file with the following:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile/lowprofile" >> ~/.zshrc
+echo ". /usr/local/etc/lowprofile" >> ~/.zshrc
 
 ```
 
@@ -38,7 +38,7 @@ or `.bash_profile`:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile/lowprofile" >> ~/.bash_profile
+echo ". /usr/local/etc/lowprofile" >> ~/.bash_profile
 
 ```
 
