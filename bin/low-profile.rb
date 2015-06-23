@@ -11,7 +11,7 @@ class LowProfile < Formula
 
   def install
     bin.install Dir["bin/*"]
-
+    etc.install Dir["etc/*"]
   end
 
   def caveats; <<-EOS.undent
