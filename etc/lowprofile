@@ -1,8 +1,8 @@
 
-low-profile(){
+lowprofile(){
 
 	# run the magic command
-	low-profile-0.1 "$@"
+	lowprofile-0.1 "$@"
 
   # remove the variable if we are deactivating
 	if [ "$1" = "dp" ] || [ "$1" = "deactive-profile" ]; then
@@ -15,9 +15,8 @@ low-profile(){
 	fi
 	exec $SHELL $login
 
-
 }
 
 if [ "$SHELL" = "/bin/bash" ] ; then
-	export -f low-profile
+	export -f lowprofile
 fi

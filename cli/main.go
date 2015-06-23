@@ -8,8 +8,8 @@ import (
 
 func main() {
   app := cli.NewApp()
-  app.Name = "low-profile"
-  app.Usage = "do work"
+  app.Name = "lowprofile"
+  app.Usage = "Control AWS profiles"
   app.Version = "0.1"
 
   app.Flags = []cli.Flag {
