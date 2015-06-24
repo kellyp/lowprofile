@@ -22,7 +22,7 @@ After the brew install finishes you will be advised to update your zshrc or bash
 
 ```bash
 
-  . /usr/local/etc/lowprofile/lowprofile
+  . /usr/local/etc/lowprofile
 
 ```
 
@@ -56,7 +56,7 @@ As always you can use the [AWS cli](http://aws.amazon.com/cli/) to add or update
 
 ```bash
 
-$ aws configure
+$ aws configure --profile different-profile
 
 AWS Access Key ID [None]: lettersandnumbers
 AWS Secret Access Key [None]: morelettersandnumbers

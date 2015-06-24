@@ -17,7 +17,7 @@ class Lowprofile < Formula
   def caveats; <<-EOS.undent
     Add the following to your bash_profile or zshrc to complete the install:
 
-      . /usr/local/etc/lowprofile/lowprofile
+      . /usr/local/etc/lowprofile
 
     and source the file to pick up the change.
 
