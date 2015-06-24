@@ -6,7 +6,7 @@ class Lowprofile < Formula
   homepage ""
   url "https://s3-us-west-2.amazonaws.com/performance-tires/releases/latest/lowprofile-0.1.tar.gz"
   version "0.1"
-  sha256 "4b7fb69c62e3cc9907420b1aafb6b3e82052a140fdddfd9dddf0893e5a7cbe94"
+  sha256 "0d471122f550e64ef0b84e19187690148b2475d585892a54a7edc2adf0111e7d"
 
 
   def install
