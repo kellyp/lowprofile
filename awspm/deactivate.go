@@ -16,7 +16,13 @@ func DeactivateProfile(c *cli.Context) {
   Debugln("checking shell")
   shell := os.Getenv("SHELL")
   Debugf("the shell is %s", shell)
-  profile := c.String("profile")
+
+  profile := os.Getenv(AWS_DEFAULT_PROFILE)
+  if len(profile) > 0 {
+    fmt.Printf("deactivating profile %s\n", profile)
+  } else {
+    fmt.Println("there is currently no active profile")
+  }
 
   var filename string
   if strings.Contains(shell, zsh) {
@@ -33,13 +39,13 @@ func DeactivateProfile(c *cli.Context) {
   if err != nil {
       log.Fatal(err)
   }
-  found, lines := scanFileForVariableAndComment(filename, profileVariable, profile)
+  found, lines := scanFileForVariableAndComment(filename, profileVariable)
   if found {
     writeFile(filename, lines)
   }
 }
 
-func scanFileForVariableAndComment(filename string, variable string, profile string) (bool, []string) {
+func scanFileForVariableAndComment(filename string, variable string) (bool, []string) {
 
   file, err := os.Open(filename)
   if err != nil {

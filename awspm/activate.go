@@ -19,6 +19,8 @@ func ActivateProfile(c *cli.Context) {
   Debugf("the shell is %s", shell)
   profile := c.String("profile")
 
+  fmt.Printf("activating profile %s\n", profile)
+
   var filename string
   if strings.Contains(shell, zsh) {
     Debugln("checking for variable in ~/.zshrc")
