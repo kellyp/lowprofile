@@ -3,7 +3,7 @@ package main
 import (
   "os"
   "github.com/codegangsta/cli"
-  "github.com/kellyp/awspm/awspm"
+  "github.com/kellyp/lowprofile/lowprofile"
 )
 
 func main() {
@@ -20,8 +20,8 @@ func main() {
   }
   app.Before =  func(c *cli.Context) error {
     if c.Bool("debug") {
-      awspm.Debug = true
-      awspm.Debugln("Turning debug on.")
+      lowprofile.Debug = true
+      lowprofile.Debugln("Turning debug on.")
     }
     return nil
   }
@@ -31,19 +31,19 @@ func main() {
       Name:      "describe-profiles",
       Aliases:   []string{"d"},
       Usage:     `Describes the list of AWS profile`,
-      Action: awspm.DescribeProfiles,
+      Action: lowprofile.DescribeProfiles,
     },
     {
       Name:      "describe-active-profile",
       Aliases:   []string{"dap"},
       Usage:     `Describes the currently active AWS profile`,
-      Action: awspm.DescribeActiveProfile,
+      Action: lowprofile.DescribeActiveProfile,
     },
     {
       Name:      "activate-profile",
       Aliases:   []string{"ap"},
       Usage:     `Sets the currently active profile`,
-      Action:    awspm.ActivateProfile,
+      Action:    lowprofile.ActivateProfile,
       Flags: []cli.Flag {
         cli.StringFlag{
           Name: "profile",
@@ -55,7 +55,7 @@ func main() {
       Name:      "deactive-profile",
       Aliases:   []string{"dp"},
       Usage:     `Deactivate the currently active AWS profile`,
-      Action: awspm.DeactivateProfile,
+      Action: lowprofile.DeactivateProfile,
     },
     // {
     //   Name:      "template",

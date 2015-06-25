@@ -1,4 +1,4 @@
-package awspm
+package lowprofile
 
 import (
   "os"
