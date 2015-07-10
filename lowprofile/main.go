@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/kellyp/lowprofile/lowprofile"
+	"github.com/kellyp/lowprofile/lib"
 	"os"
 )
 

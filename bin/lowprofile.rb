@@ -4,17 +4,18 @@
 class Lowprofile < Formula
   desc ""
   homepage ""
-  url "https://s3-us-west-2.amazonaws.com/performance-tires/releases/latest/lowprofile-0.1.tar.gz"
+  url "https://s3-us-west-2.amazonaws.com/performance-tires/releases/dev/lowprofile-0.1.tar.gz"
   version "0.1"
-  sha256 "3f4fecb7cf5630c910c7ac85cb863aceed044f5bd7db44b7d7c9ccc5d0708710"
+  sha256 "05dbd93af64562179289b3ada346efe09895a4be31939a309a1b550c052e8e0f"
 
   depends_on "go" => :build
 
   def install
     ENV["GOPATH"] = buildpath
 
+    system "go", "get", "-d", "github.com/kellyp/lowprofile/cli"
     # Build and install lowprofile
-    system "go", "build", "-o", "bin/lowprofile-#{version}", "cli"
+    system "go", "build", "-v", "-o", "./bin/lowprofile-#{version}", "github.com/kellyp/lowprofile/cli"
 
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
@@ -42,15 +43,6 @@ class Lowprofile < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! It's enough to just replace
-    # "false" with the main program this formula installs, but it'd be nice if you
-    # were more thorough. Run the test with `brew test lowprofile`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "false"
   end
 end
