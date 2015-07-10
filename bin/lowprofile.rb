@@ -13,9 +13,9 @@ class Lowprofile < Formula
   def install
     ENV["GOPATH"] = buildpath
 
-    system "go", "get", "-d", "github.com/kellyp/lowprofile/cli"
+    system "go", "get", "-d", "github.com/kellyp/lowprofile/lowprofile"
     # Build and install lowprofile
-    system "go", "build", "-v", "-o", "./bin/lowprofile-#{version}", "github.com/kellyp/lowprofile/cli"
+    system "go", "build", "-v", "-o", "./bin/lowprofile-#{version}", "github.com/kellyp/lowprofile/lowprofile"
 
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
