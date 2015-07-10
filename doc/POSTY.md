@@ -1,4 +1,5 @@
-# Low Profile - The AWS Profile Activator
+# Low Profile
+Simple AWS profile management
 
 Hi, we here at DualSpark feel your pain if you've ever worked with multiple AWS
 accounts.  That's why we've come up with a really simple tool for management of multiple AWS profiles from the cli.  Low Profile (lowprofile) isn't magical it simply manages your ~/.aws/ files and associated environment variables.  Nothing you couldn't do manually just a simplified interface.  Today we are happy to be releasing and open sourcing Low Profile.  Feel free to create issues, features or just use it.  We hope it makes life a little easier when working with multiple AWS environments.
@@ -98,6 +99,10 @@ $ lowprofile describe-active-profile
 there is currently no active profile
 
 ```
+
+The goal of Low Profile is to make it easier to set your active AWS profile and
+easily see which one is selected.  We think we have achieved that goal, please let us know what you think.
+
 
 ### Prompt v2
 

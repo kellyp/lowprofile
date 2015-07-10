@@ -8,8 +8,14 @@ class Lowprofile < Formula
   version "0.1"
   sha256 "3f4fecb7cf5630c910c7ac85cb863aceed044f5bd7db44b7d7c9ccc5d0708710"
 
+  depends_on "go" => :build
 
   def install
+    ENV["GOPATH"] = buildpath
+
+    # Build and install lowprofile
+    system "go", "build", "-o", "bin/lowprofile-#{version}", "cli"
+
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
   end
