@@ -1,23 +1,26 @@
-# Documentation: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md
-#                /usr/local/Library/Contributions/example-formula.rb
+require "language/go"
 
 class Lowprofile < Formula
   desc ""
   homepage ""
-  url "https://s3-us-west-2.amazonaws.com/performance-tires/releases/dev/lowprofile-0.1.tar.gz"
+  url "https://github.com/kellyp/lowprofile/archive/383c6f77c9f5e7b8e7d2f014b8cece384f62e194.tar.gz"
   version "0.1"
-  sha256 "05dbd93af64562179289b3ada346efe09895a4be31939a309a1b550c052e8e0f"
+  sha256 "1db22337db30079568690d6f22e267385e28ca5ac0038cb25deb4b5b9e2d5a60"
 
   depends_on "go" => :build
 
+  go_resource "github.com/kellyp/lowprofile" do
+    url "https://github.com/kellyp/lowprofile.git", :revision => "383c6f77c9f5e7b8e7d2f014b8cece384f62e194"
+  end
+
   def install
     ENV["GOPATH"] = buildpath
+    Language::Go.stage_deps resources, buildpath/"src"
 
-    system "go", "get", "-d", "github.com/kellyp/lowprofile"
     # Build and install lowprofile
-    system "go", "build", "-v", "-o", "./bin/lowprofile-#{version}", "github.com/kellyp/lowprofile"
+    system "go", "build", "-v", "-o", "./bin/lowprofile-#{version}", "main.go"
 
-    bin.install Dir["bin/*"]
+    bin.install Dir["bin/lowprofile-#{version}"]
     etc.install Dir["etc/*"]
   end
 
@@ -43,6 +46,6 @@ class Lowprofile < Formula
   end
 
   test do
-    system "false"
+    system "#{bin}/lowprofile-#{version}", "--help"
   end
 end

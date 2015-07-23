@@ -12,6 +12,11 @@ import (
 )
 
 func ActivateProfile(c *cli.Context) {
+	if !c.IsSet("profile") {
+		cli.ShowSubcommandHelp(c)
+		os.Exit(1)
+	}
+
 	Debugln("checking shell")
 	shell := os.Getenv("SHELL")
 	Debugf("the shell is %s", shell)
