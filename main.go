@@ -48,6 +48,7 @@ func main() {
 				cli.StringFlag{
 					Name:  "profile",
 					Usage: "name of the profile to activate",
+					Value: "profile-name",
 				},
 			},
 		},
