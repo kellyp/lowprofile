@@ -3,14 +3,14 @@ require "language/go"
 class Lowprofile < Formula
   desc ""
   homepage ""
-  url "https://github.com/kellyp/lowprofile/archive/1e2af55a5102650a4ccc2c296654f713c56ff00a.tar.gz"
+  url "https://github.com/kellyp/lowprofile/archive/b162b9f19313ee879442562b8b06911311faa52a.tar.gz"
   version "0.1"
-  sha256 "11ea8e8ef3185276ac9592a10e783e693cfcc27cf227dc4628c52afdf6913635"
+  sha256 "64109b05badf2fe7000e9e73ce02f3cdbaf4066946c1c193e0e513633e40d021"
 
   depends_on "go" => :build
 
   go_resource "github.com/kellyp/lowprofile" do
-    url "git@github.com:kellyp/lowprofile.git", :revision => "1e2af55a5102650a4ccc2c296654f713c56ff00a"
+    url "https://github.com/kellyp/lowprofile.git", :revision => "b162b9f19313ee879442562b8b06911311faa52a"
   end
 
   def install
