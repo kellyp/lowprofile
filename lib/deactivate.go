@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
-	"log"
 	"os"
 	"regexp"
 	"strings"
@@ -31,12 +30,12 @@ func DeactivateProfile(c *cli.Context) {
 		Debugln("checking for variable in ~/.bash_profile")
 		filename = bash_profile
 	} else {
-		log.Fatalf("Sorry, %s is not supported", shell)
+		panic(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
 	}
 
 	filename, err := tilde.Expand(filename)
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 	found, lines := scanFileForVariableAndComment(filename, profileVariable)
 	if found {
@@ -48,7 +47,7 @@ func scanFileForVariableAndComment(filename string, variable string) (bool, []st
 
 	file, err := os.Open(filename)
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 	defer file.Close()
 
@@ -69,7 +68,7 @@ func scanFileForVariableAndComment(filename string, variable string) (bool, []st
 	}
 
 	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 
 	return found, lines

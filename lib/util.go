@@ -42,5 +42,5 @@ func writeFile(filename string, lines []string) {
     fmt.Fprintln(w, lines[index])
   }
 
-	w.Flush() // Don't forget to flush!
+	w.Flush()
 }

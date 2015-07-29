@@ -2,6 +2,8 @@
 
 Simple profile management for AWS.
 
+[![Build Status](https://magnum.travis-ci.com/kellyp/lowprofile.svg?token=AGRFpUr1LzvrKJ1SmsR3&branch=master)](https://magnum.travis-ci.com/kellyp/lowprofile)
+
 ## Install
 
 Installation is super simple, we are using [Brew](http://brew.sh) on OS X.

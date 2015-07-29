@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"github.com/kellyp/lowprofile/lib"
 	"os"
@@ -58,34 +59,12 @@ func main() {
 			Usage:   `Deactivate the currently active AWS profile`,
 			Action:  lowprofile.DeactivateProfile,
 		},
-		// {
-		//   Name:      "template",
-		//   Aliases:     []string{"r"},
-		//   Usage:     "options for task templates",
-		//   Flags: []cli.Flag {
-		//     cli.BoolFlag{
-		//       Name: "fart",
-		//       Usage: "shall we fart?",
-		//     },
-		//   },
-		//   Subcommands: []cli.Command{
-		//     {
-		//       Name:  "add",
-		//       Usage: "add a new template",
-		//       Action: func(c *cli.Context) {
-		//           println("new task template: ", c.Args().First())
-		//       },
-		//     },
-		//     {
-		//       Name:  "remove",
-		//       Usage: "remove an existing template",
-		//       Action: func(c *cli.Context) {
-		//         println("removed task template: ", c.Args().First())
-		//       },
-		//     },
-		//   },
-		// },
 	}
 
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println(r)
+		}
+	}()
 	app.Run(os.Args)
 }

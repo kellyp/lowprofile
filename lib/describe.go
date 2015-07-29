@@ -5,7 +5,6 @@ import (
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/vaughan0/go-ini"
 	"github.com/kellyp/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
-	"log"
 	"os"
 )
 
@@ -16,7 +15,7 @@ func DescribeProfiles(c *cli.Context) {
 	Debugln("reading profiles from ~/.aws/credentials")
 	filename, err := tilde.Expand(dot_aws_credentials)
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
 
 	profiles := getProfiles(filename)
@@ -38,7 +37,7 @@ func DescribeActiveProfile(c *cli.Context) {
 func getProfiles(filename string) []string {
 	config, err := ini.LoadFile(filename)
 	if err != nil {
-		log.Fatal(err)
+		panic(fmt.Sprintf("Unable to load %s make sure the file exists and is valid.", filename))
 	}
 	var profiles []string
 	for profile := range config {
