@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/testsuite"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/testsuite"
 )
 
 type Suite struct {

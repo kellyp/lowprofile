@@ -3,10 +3,10 @@ package assertion_test
 import (
 	"errors"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/assertion"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/fakematcher"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/assertion"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/fakematcher"
 )
 
 var _ = Describe("Assertion", func() {

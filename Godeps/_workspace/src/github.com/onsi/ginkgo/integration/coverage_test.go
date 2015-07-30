@@ -4,9 +4,9 @@ import (
 	"os"
 	"os/exec"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
 )
 
 var _ = Describe("Coverage Specs", func() {

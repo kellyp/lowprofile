@@ -1,10 +1,10 @@
 package lowprofile
 
 import (
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 	"flag"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"io/ioutil"
 	"os"
 )

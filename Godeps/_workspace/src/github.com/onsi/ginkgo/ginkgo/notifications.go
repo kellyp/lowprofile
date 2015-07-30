@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/testsuite"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/testsuite"
 )
 
 type Notifier struct {

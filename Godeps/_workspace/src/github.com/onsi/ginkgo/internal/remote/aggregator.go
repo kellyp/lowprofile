@@ -12,9 +12,9 @@ package remote
 import (
 	"time"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters/stenographer"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters/stenographer"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 )
 
 type configAndSuite struct {

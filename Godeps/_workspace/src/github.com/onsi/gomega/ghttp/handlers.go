@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"net/url"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
 )
 
 //CombineHandler takes variadic list of handlers and produces one handler

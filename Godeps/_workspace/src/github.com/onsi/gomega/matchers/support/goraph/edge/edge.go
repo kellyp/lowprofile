@@ -1,6 +1,6 @@
 package edge
 
-import . "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers/support/goraph/node"
+import . "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers/support/goraph/node"
 
 type Edge struct {
 	Node1 Node

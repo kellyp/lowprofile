@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 )
 
 func TestNewContext(t *testing.T) {

@@ -3,8 +3,8 @@ package lowprofile
 import (
 	"bufio"
 	"fmt"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
 	"os"
 	"regexp"
 	"strings"

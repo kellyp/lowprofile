@@ -2,3 +2,8 @@ language: go
 
 go:
   - 1.4.2
+
+install:
+  - go get -v -u -f ./...
+script:
+  - go test -v ./...

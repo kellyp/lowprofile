@@ -7,12 +7,12 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/spec"
-	Writer "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/spec"
+	Writer "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 
 	"time"
 )

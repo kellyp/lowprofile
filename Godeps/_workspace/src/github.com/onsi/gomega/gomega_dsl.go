@@ -18,10 +18,10 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/assertion"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/asyncassertion"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/testingtsupport"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/assertion"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/asyncassertion"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/internal/testingtsupport"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
 )
 
 const GOMEGA_VERSION = "1.0"

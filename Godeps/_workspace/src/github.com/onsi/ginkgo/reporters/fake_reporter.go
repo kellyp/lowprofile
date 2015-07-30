@@ -1,8 +1,8 @@
 package reporters
 
 import (
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 )
 
 //FakeReporter is useful for testing purposes

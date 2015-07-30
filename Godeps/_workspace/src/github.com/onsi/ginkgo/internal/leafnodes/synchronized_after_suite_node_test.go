@@ -1,17 +1,17 @@
 package leafnodes_test
 
 import (
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 	"sync"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/ghttp"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/ghttp"
 	"net/http"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/codelocation"
-	Failer "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/failer"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/codelocation"
+	Failer "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/failer"
 	"time"
 )
 

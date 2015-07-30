@@ -3,14 +3,14 @@ require "language/go"
 class Lowprofile < Formula
   desc ""
   homepage ""
-  url "https://github.com/dualspark/lowprofile/archive/b162b9f19313ee879442562b8b06911311faa52a.tar.gz"
+  url "https://github.com/DualSpark/lowprofile/archive/b162b9f19313ee879442562b8b06911311faa52a.tar.gz"
   version "0.1"
   sha256 "64109b05badf2fe7000e9e73ce02f3cdbaf4066946c1c193e0e513633e40d021"
 
   depends_on "go" => :build
 
-  go_resource "github.com/dualspark/lowprofile" do
-    url "https://github.com/dualspark/lowprofile.git", :revision => "b162b9f19313ee879442562b8b06911311faa52a"
+  go_resource "github.com/DualSpark/lowprofile" do
+    url "https://github.com/DualSpark/lowprofile.git", :revision => "b162b9f19313ee879442562b8b06911311faa52a"
   end
 
   def install

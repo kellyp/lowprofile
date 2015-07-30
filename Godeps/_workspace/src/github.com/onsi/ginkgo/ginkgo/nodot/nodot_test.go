@@ -1,7 +1,7 @@
 package nodot_test
 
 import (
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/nodot"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/ginkgo/nodot"
 	"strings"
 )
 

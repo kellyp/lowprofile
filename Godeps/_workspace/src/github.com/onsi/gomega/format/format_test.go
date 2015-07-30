@@ -2,10 +2,10 @@ package format_test
 
 import (
 	"fmt"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
 	"strings"
 )
 

@@ -3,9 +3,9 @@ package matchers_test
 import (
 	"errors"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers"
 )
 
 func Erroring() error {

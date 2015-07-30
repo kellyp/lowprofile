@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/types"
 )
 
 type AsyncAssertionType uint

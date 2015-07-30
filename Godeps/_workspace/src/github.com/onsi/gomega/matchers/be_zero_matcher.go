@@ -1,7 +1,7 @@
 package matchers
 
 import (
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
 	"reflect"
 )
 

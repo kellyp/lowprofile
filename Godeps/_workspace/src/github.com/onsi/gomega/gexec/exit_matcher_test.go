@@ -1,12 +1,12 @@
 package gexec_test
 
 import (
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
 	"os/exec"
 	"time"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 )
 
 type NeverExits struct{}

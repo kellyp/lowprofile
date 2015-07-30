@@ -2,7 +2,7 @@
 
 Simple profile management for AWS.
 
-[![Build Status](https://magnum.travis-ci.com/dualspark/lowprofile.svg?token=AGRFpUr1LzvrKJ1SmsR3&branch=master)](https://magnum.travis-ci.com/dualspark/lowprofile)
+[![Build Status](https://magnum.travis-ci.com/DualSpark/lowprofile.svg?token=AGRFpUr1LzvrKJ1SmsR3&branch=master)](https://magnum.travis-ci.com/DualSpark/lowprofile)
 
 ## Install
 

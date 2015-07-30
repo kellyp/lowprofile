@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"os"
 
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	. "github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers"
 )
 
 var _ = Describe("BeAnExistingFileMatcher", func() {

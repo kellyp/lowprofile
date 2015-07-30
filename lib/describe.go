@@ -2,9 +2,9 @@ package lowprofile
 
 import (
 	"fmt"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/github.com/vaughan0/go-ini"
-	"github.com/dualspark/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/vaughan0/go-ini"
+	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
 	"os"
 )
 
