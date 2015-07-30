@@ -1,0 +1,22 @@
+
+lowprofile(){
+
+	# run the magic command
+	lowprofile-0.1 "$@"
+
+  # remove the variable if we are deactivating
+	if [ "$1" = "dp" ] || [ "$1" = "deactive-profile" ]; then
+		unset AWS_DEFAULT_PROFILE
+	fi
+
+	# refresh the shell
+	if [ "$SHELL" = "/bin/bash" ] ; then
+		login="--login"
+	fi
+	exec $SHELL $login
+
+}
+
+if [ "$SHELL" = "/bin/bash" ] ; then
+	export -f lowprofile
+fi
