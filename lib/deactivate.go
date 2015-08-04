@@ -8,7 +8,24 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"errors"
 )
+
+func BeforeDeactivateProfile(c *cli.Context) error {
+	shell := os.Getenv("SHELL")
+	if Shells()[shell] == "" {
+		Debugln("Unsupported shell")
+		return errors.New(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
+	}
+
+	var filename, _ = tilde.Expand(Shells()[shell])
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		Debugln("Profile file isn't there")
+		return errors.New(fmt.Sprintf("File %s not found", Shells()[shell]))
+	}
+
+	return nil
+}
 
 func DeactivateProfile(c *cli.Context) {
 	Debugln("checking shell")

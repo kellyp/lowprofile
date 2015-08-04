@@ -7,6 +7,7 @@ import (
 	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"io/ioutil"
 	"os"
+	"errors"
 )
 
 var _ = Describe("Describe", func() {
@@ -26,9 +27,9 @@ var _ = Describe("Describe", func() {
 
 
 	Context("When the resource file doesn't exist", func() {
-    It("should panic", func() {
+    It("should error", func() {
 				os.Setenv("HOME", "/tmp")
-        Expect(func(){DescribeProfiles(context)}).Should(Panic())
+        Expect(BeforeDescribeProfiles(context)).Should(Equal(errors.New("File /tmp/.aws/credentials not found, make sure to run 'aws configure'")))
     })
   })
 

@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"errors"
 )
 
 var _ = Describe("Deactivate", func() {
@@ -30,17 +31,17 @@ var _ = Describe("Deactivate", func() {
 
 
 	Context("When the shell is not supported", func() {
-    It("should panic", func() {
+    It("should error", func() {
 				os.Setenv("SHELL", "not_supported_shell")
-        Expect(func(){DeactivateProfile(context)}).Should(Panic())
+        Expect(BeforeDeactivateProfile(context)).Should(Equal(errors.New("Sorry, not_supported_shell is not a supported shell")))
     })
   })
 
 	Context("When the resource file doesn't exist", func() {
-    It("should panic", func() {
-				os.Setenv("SHELL", "bash")
+    It("should error", func() {
+				os.Setenv("SHELL", "/bin/bash")
 				os.Setenv("HOME", "/tmp")
-        Expect(func(){DeactivateProfile(context)}).Should(Panic())
+        Expect(BeforeDeactivateProfile(context)).Should(Equal(errors.New("File ~/.bash_profile not found")))
     })
   })
 
