@@ -9,14 +9,15 @@ import (
 	"errors"
 )
 
-const AWS_DEFAULT_PROFILE = "AWS_DEFAULT_PROFILE"
+const AWS_PROFILE = "AWS_PROFILE"
 const dot_aws_credentials = "~/.aws/credentials"
 
 func BeforeDescribeProfiles(c *cli.Context) error {
 	var filename, _ = tilde.Expand(dot_aws_credentials)
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		Debugln("AWS credentials file isn't there")
-		return errors.New(fmt.Sprintf("File %s not found, make sure to run 'aws configure'", filename))
+		output := fmt.Sprintf("File %s not found, make sure to run 'aws configure'", filename)
+		fmt.Println(output)
+		return errors.New(output)
 	}
 	return nil
 }
@@ -35,8 +36,8 @@ func DescribeProfiles(c *cli.Context) {
 }
 
 func DescribeActiveProfile(c *cli.Context) {
-	Debugln("reading variable AWS_DEFAULT_PROFILE")
-	profile := os.Getenv(AWS_DEFAULT_PROFILE)
+	Debugln("reading variable AWS_PROFILE")
+	profile := os.Getenv(AWS_PROFILE)
 	if len(profile) > 0 {
 		fmt.Printf("current profile is %s\n", profile)
 	} else {

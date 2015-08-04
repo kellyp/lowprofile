@@ -39,13 +39,13 @@ echo ". /usr/local/etc/lowprofile" >> ~/.bash_profile
 
 ```
 
-you can also add the `AWS_DEFAULT_PROFILE` variable to your environment file if it
+you can also add the `AWS_PROFILE` variable to your environment file if it
 isn't there already (lowprofile will do this automatically the first time you activate
 a profile).
 
 ```bash
 
-echo "export AWS_DEFAULT_PROFILE=default" >> ~/.zshrc
+echo "export AWS_PROFILE=default" >> ~/.zshrc
 
 ```
 

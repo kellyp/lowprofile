@@ -72,7 +72,7 @@ var _ = Describe("Deactivate", func() {
 				Expect(func(){DeactivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
 
-				Expect(strings.TrimSpace(string(contents))).To(Equal("# export AWS_DEFAULT_PROFILE=some-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("# export AWS_PROFILE=some-profile"))
 		})
 
 		AfterEach(func(){
@@ -107,7 +107,7 @@ var _ = Describe("Deactivate", func() {
 				Expect(func(){DeactivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
 
-				Expect(strings.TrimSpace(string(contents))).To(Equal("# export AWS_DEFAULT_PROFILE=some-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("# export AWS_PROFILE=some-profile"))
 		})
 
 		AfterEach(func(){

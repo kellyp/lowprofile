@@ -7,21 +7,22 @@ import (
 	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/gopkg.in/mattes/go-expand-tilde.v1"
 	"os"
 	"regexp"
-	"strings"
 	"errors"
 )
 
 func BeforeDeactivateProfile(c *cli.Context) error {
 	shell := os.Getenv("SHELL")
 	if Shells()[shell] == "" {
-		Debugln("Unsupported shell")
-		return errors.New(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
+		output := fmt.Sprintf("Sorry, %s is not a supported shell", shell)
+		fmt.Println(output)
+		return errors.New(output)
 	}
 
 	var filename, _ = tilde.Expand(Shells()[shell])
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		Debugln("Profile file isn't there")
-		return errors.New(fmt.Sprintf("File %s not found", Shells()[shell]))
+		output := fmt.Sprintf("File %s not found", Shells()[shell])
+		fmt.Println(output)
+		return errors.New(output)
 	}
 
 	return nil
@@ -32,25 +33,15 @@ func DeactivateProfile(c *cli.Context) {
 	shell := os.Getenv("SHELL")
 	Debugf("the shell is %s", shell)
 
-	profile := os.Getenv(AWS_DEFAULT_PROFILE)
+	profile := os.Getenv(AWS_PROFILE)
 	if len(profile) > 0 {
 		fmt.Printf("deactivating profile %s\n", profile)
 	} else {
 		fmt.Println("there is currently no active profile")
 	}
 
-	var filename string
-	if strings.Contains(shell, zsh) {
-		Debugln("checking for variable in ~/.zshrc")
-		filename = zshrc
-	} else if strings.Contains(shell, bash) {
-		Debugln("checking for variable in ~/.bash_profile")
-		filename = bash_profile
-	} else {
-		panic(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
-	}
-
-	filename, err := tilde.Expand(filename)
+	var filename, err = checkForShell()
+	filename, err = tilde.Expand(filename)
 	if err != nil {
 		panic(err)
 	}
