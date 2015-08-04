@@ -44,6 +44,7 @@ func main() {
 			Name:    "activate-profile",
 			Aliases: []string{"ap"},
 			Usage:   `Sets the currently active profile`,
+			Before:  lowprofile.BeforeActivateProfile,
 			Action:  lowprofile.ActivateProfile,
 			Flags: []cli.Flag{
 				cli.StringFlag{
@@ -57,6 +58,7 @@ func main() {
 			Name:    "deactive-profile",
 			Aliases: []string{"dp"},
 			Usage:   `Deactivate the currently active AWS profile`,
+			// Before:  lowprofile.BeforeDeactivateProfile,
 			Action:  lowprofile.DeactivateProfile,
 		},
 	}

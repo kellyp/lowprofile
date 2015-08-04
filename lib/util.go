@@ -5,15 +5,22 @@ import (
   "bufio"
   "fmt"
   "log"
+  "strings"
+  "errors"
 )
 
-const zsh  = "zsh"
+const zsh  = "/bin/zsh"
 const zshrc = "~/.zshrc"
 const bash_profile = "~/.bash_profile"
-const bash = "bash"
+const bash = "/bin/bash"
 const profileVariable = "AWS_DEFAULT_PROFILE"
 
+
 var Debug bool = false
+
+func Shells() map[string]string {
+  return map[string]string {bash: bash_profile, zsh: zshrc}
+}
 
 func Debugln(str string) {
   if Debug {
@@ -43,4 +50,23 @@ func writeFile(filename string, lines []string) {
   }
 
 	w.Flush()
+}
+
+func checkForShell()(string, error) {
+	Debugln("checking shell")
+	shell := os.Getenv("SHELL")
+	Debugf("the shell is %s", shell)
+	var err error
+	var filename string
+	if strings.Contains(shell, zsh) {
+		Debugln("checking for variable in ~/.zshrc")
+		filename = zshrc
+	} else if strings.Contains(shell, bash) {
+		Debugln("checking for variable in ~/.bash_profile")
+		filename = bash_profile
+	} else {
+		 err = errors.New(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
+	}
+
+	return filename, err
 }
