@@ -6,7 +6,7 @@ lowprofile(){
 
   # remove the variable if we are deactivating
 	if [ "$1" = "dp" ] || [ "$1" = "deactive-profile" ]; then
-		unset AWS_DEFAULT_PROFILE
+		unset AWS_PROFILE
 	fi
 
 	# refresh the shell

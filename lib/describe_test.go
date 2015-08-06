@@ -55,11 +55,11 @@ var _ = Describe("Describe", func() {
 		})
 
 		It("should describe active profiles", func() {
-				os.Setenv("AWS_DEFAULT_PROFILE", "some-profile")
+				os.Setenv("AWS_PROFILE", "some-profile")
 				Expect(func(){DescribeActiveProfile(context)}).ShouldNot(Panic())
-				os.Setenv("AWS_DEFAULT_PROFILE", "some-other-profile")
+				os.Setenv("AWS_PROFILE", "some-other-profile")
 				Expect(func(){DescribeActiveProfile(context)}).ShouldNot(Panic())
-				os.Setenv("AWS_DEFAULT_PROFILE", "")
+				os.Setenv("AWS_PROFILE", "")
 				Expect(func(){DescribeActiveProfile(context)}).ShouldNot(Panic())
 		})
 

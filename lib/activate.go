@@ -13,20 +13,23 @@ import (
 func BeforeActivateProfile(c *cli.Context) error {
 	if !c.IsSet("profile") {
 		cli.ShowSubcommandHelp(c)
-		Debugln("Missing profile")
-		return errors.New("Missing required option 'profile'")
+		output := "Missing required option 'profile'"
+		fmt.Println(output)
+		return errors.New(output)
 	}
 
 	shell := os.Getenv("SHELL")
 	if Shells()[shell] == "" {
-		Debugln("Unsupported shell")
-		return errors.New(fmt.Sprintf("Sorry, %s is not a supported shell", shell))
+		output := fmt.Sprintf("Sorry, %s is not a supported shell", shell)
+		fmt.Println(output)
+		return errors.New(output)
 	}
 
 	var filename, _ = tilde.Expand(Shells()[shell])
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		Debugln("Profile file isn't there")
-		return errors.New(fmt.Sprintf("File %s not found", Shells()[shell]))
+		output := fmt.Sprintf("File %s not found", Shells()[shell])
+		fmt.Println(output)
+		return errors.New(output)
 	}
 
 	return nil

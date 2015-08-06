@@ -13,7 +13,7 @@ const zsh  = "/bin/zsh"
 const zshrc = "~/.zshrc"
 const bash_profile = "~/.bash_profile"
 const bash = "/bin/bash"
-const profileVariable = "AWS_DEFAULT_PROFILE"
+const profileVariable = "AWS_PROFILE"
 
 
 var Debug bool = false

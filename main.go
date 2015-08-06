@@ -32,6 +32,7 @@ func main() {
 			Name:    "describe-profiles",
 			Aliases: []string{"d"},
 			Usage:   `Describes the list of AWS profile`,
+			Before:  lowprofile.BeforeDescribeProfiles,
 			Action:  lowprofile.DescribeProfiles,
 		},
 		{
@@ -58,7 +59,7 @@ func main() {
 			Name:    "deactive-profile",
 			Aliases: []string{"dp"},
 			Usage:   `Deactivate the currently active AWS profile`,
-			// Before:  lowprofile.BeforeDeactivateProfile,
+			Before:  lowprofile.BeforeDeactivateProfile,
 			Action:  lowprofile.DeactivateProfile,
 		},
 	}

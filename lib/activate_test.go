@@ -62,7 +62,7 @@ var _ = Describe("Activate", func() {
     It("should activate", func() {
         Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-profile"))
     })
 
 		It("should reactivate", func() {
@@ -70,7 +70,7 @@ var _ = Describe("Activate", func() {
 
 				Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-other-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-other-profile"))
 		})
 
 		It("should reactivate after deactivation", func() {
@@ -80,7 +80,7 @@ var _ = Describe("Activate", func() {
 				Expect(func(){DeactivateProfile(context)}).ShouldNot(Panic())
 				Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-other-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-other-profile"))
 		})
 
 		AfterEach(func(){
@@ -106,7 +106,7 @@ var _ = Describe("Activate", func() {
 		It("should activate", func() {
 				Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-profile"))
 		})
 
 		It("should reactivate", func() {
@@ -114,7 +114,7 @@ var _ = Describe("Activate", func() {
 
 				Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-other-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-other-profile"))
 		})
 
 		It("should reactivate after deactivation", func() {
@@ -124,7 +124,7 @@ var _ = Describe("Activate", func() {
 				Expect(func(){DeactivateProfile(context)}).ShouldNot(Panic())
 				Expect(func(){ActivateProfile(context)}).ShouldNot(Panic())
 				contents, _ := ioutil.ReadFile(profilePath)
-				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_DEFAULT_PROFILE=some-other-profile"))
+				Expect(strings.TrimSpace(string(contents))).To(Equal("export AWS_PROFILE=some-other-profile"))
 		})
 
 		AfterEach(func(){

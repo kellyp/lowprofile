@@ -34,7 +34,7 @@ class Lowprofile < Formula
     if you don't already have it in there feel free to add (if not lowprofile
     will append it for you):
 
-      export AWS_DEFAULT_PROFILE=default
+      export AWS_PROFILE=default
 
 
     that's it lowprofile with take it from there!
