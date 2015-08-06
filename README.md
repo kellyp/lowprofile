@@ -6,7 +6,7 @@ Simple profile management for AWS.
 
 ## Install
 
-Installation is super simple, we are using [Brew](http://brew.sh) on OS X.
+Installation is super simple, we are using [Brew](http://brew.sh).
 
 NOTE: While in development the Low Profile Brew formula is being hosted outside of the Brew project.
 
