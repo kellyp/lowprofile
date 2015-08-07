@@ -19,7 +19,7 @@ After the brew install finishes you will be advised to update your zshrc or bash
 
 ```bash
 
-  . /usr/local/etc/lowprofile
+  . $(brew --repository)/etc/lowprofile
 
 ```
 
@@ -27,7 +27,7 @@ which for example can done without editing the `.zshrc` file with the following:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile" >> ~/.zshrc
+echo ". $(brew --repository)/etc/lowprofile" >> ~/.zshrc
 
 ```
 
@@ -35,7 +35,7 @@ or `.bash_profile`:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile" >> ~/.bash_profile
+echo ". $(brew --repository)/etc/lowprofile" >> ~/.bash_profile
 
 ```
 
