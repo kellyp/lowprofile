@@ -64,8 +64,6 @@ Default output format [None]: json
 
 ## Usage
 
-### Activate
-
 Now that Low Profile is installed and you have a default AWS profile congfigured, you can now describe-profiles, activate-profile, describe-active-profile and deactivate-profile the currently active  profile.  
 
 
@@ -95,3 +93,7 @@ $ lowprofile describe-active-profile
 there is currently no active profile
 
 ```
+
+## What's going on?
+
+Interaction with the [AWS APIs](https://aws.amazon.com/documentation/) can be done by calling them directly, through a library or from the command line.  The libraries and command line support use of several environment variables for auth'ing with AWS (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SECURITY_TOKEN and AWS_PROFILE).  Low Profile uses the AWS_PROFILE variable for activating profiles inside the ~/.aws/crendentials file.  You can still use the AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SECURITY_TOKEN variables to override what's in the credentials file.  Low Profile uses your shell's login init file, currently `~/.bash_profile` or `~/.zshrc`.  After a `lowprofile` command is run your shell session will be reset to pick change to the AWS_PROFILE variable.
