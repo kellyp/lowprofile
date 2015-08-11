@@ -8,11 +8,9 @@ Simple profile management for AWS.
 
 Installation is super simple, we are using [Brew](http://brew.sh).
 
-NOTE: While in development the Low Profile Brew formula is being hosted outside of the Brew project.
-
 ```bash
 $ brew update
-$ brew install https://s3-us-west-2.amazonaws.com/performance-tires/brew/latest/lowprofile.rb
+$ brew install lowprofile
 ```
 
 After the brew install finishes you will be advised to update your zshrc or bash_profile with the following:
