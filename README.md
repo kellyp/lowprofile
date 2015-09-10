@@ -6,20 +6,18 @@ Simple profile management for AWS.
 
 ## Install
 
-Installation is super simple, we are using [Brew](http://brew.sh) on OS X.
-
-NOTE: While in development the Low Profile Brew formula is being hosted outside of the Brew project.
+Installation is super simple, we are using [Brew](http://brew.sh).
 
 ```bash
 $ brew update
-$ brew install https://s3-us-west-2.amazonaws.com/performance-tires/brew/latest/lowprofile.rb
+$ brew install lowprofile
 ```
 
 After the brew install finishes you will be advised to update your zshrc or bash_profile with the following:
 
 ```bash
 
-  . /usr/local/etc/lowprofile
+  . $(brew --repository)/etc/lowprofile
 
 ```
 
@@ -27,7 +25,7 @@ which for example can done without editing the `.zshrc` file with the following:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile" >> ~/.zshrc
+echo ". $(brew --repository)/etc/lowprofile" >> ~/.zshrc
 
 ```
 
@@ -35,7 +33,7 @@ or `.bash_profile`:
 
 ```bash
 
-echo ". /usr/local/etc/lowprofile" >> ~/.bash_profile
+echo ". $(brew --repository)/etc/lowprofile" >> ~/.bash_profile
 
 ```
 
@@ -63,8 +61,6 @@ Default output format [None]: json
 ```
 
 ## Usage
-
-### Activate
 
 Now that Low Profile is installed and you have a default AWS profile congfigured, you can now describe-profiles, activate-profile, describe-active-profile and deactivate-profile the currently active  profile.  
 
@@ -95,3 +91,7 @@ $ lowprofile describe-active-profile
 there is currently no active profile
 
 ```
+
+## What's going on?
+
+Interaction with the [AWS APIs](https://aws.amazon.com/documentation/) can be done by calling them directly, through a library or from the command line.  The libraries and command line support use of several environment variables for auth'ing with AWS (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SECURITY_TOKEN and AWS_PROFILE).  Low Profile uses the AWS_PROFILE variable for activating profiles inside the ~/.aws/crendentials file.  You can still use the AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SECURITY_TOKEN variables to override what's in the credentials file.  Low Profile uses your shell's login init file, currently `~/.bash_profile` or `~/.zshrc`.  After a `lowprofile` command is run your shell session will be refreshed to pick change to the AWS_PROFILE variable.
