@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/DualSpark/lowprofile/lib"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/kellyp/lowprofile/lib"
 	"os"
 )
 

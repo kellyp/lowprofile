@@ -1,11 +1,11 @@
 package writer_test
 
 import (
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gbytes"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gbytes"
 
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 )
 
 var _ = Describe("Writer", func() {

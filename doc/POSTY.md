@@ -1,7 +1,7 @@
 # Low Profile
 Simple AWS profile management
 
-Hi, we here at DualSpark feel your pain if you've ever worked with multiple AWS
+Hi, we here at kellyp feel your pain if you've ever worked with multiple AWS
 accounts.  That's why we've come up with a really simple tool for management of multiple AWS profiles from the cli.  Low Profile (lowprofile) isn't magical it simply manages your ~/.aws/ files and associated environment variables.  Nothing you couldn't do manually just a simplified interface.  Today we are happy to be releasing and open sourcing Low Profile.  Feel free to create issues, features or just use it.  We hope it makes life a little easier when working with multiple AWS environments.
 
 ## Source

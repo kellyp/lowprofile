@@ -5,9 +5,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/containernode"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/containernode"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 )
 
 type Spec struct {

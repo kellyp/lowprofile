@@ -1,10 +1,10 @@
 package integration_test
 
 import (
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gbytes"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gbytes"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
 )
 
 var _ = Describe("Emitting progress", func() {

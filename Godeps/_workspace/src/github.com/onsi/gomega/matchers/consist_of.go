@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers/support/goraph/bipartitegraph"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/matchers/support/goraph/bipartitegraph"
 )
 
 type ConsistOfMatcher struct {

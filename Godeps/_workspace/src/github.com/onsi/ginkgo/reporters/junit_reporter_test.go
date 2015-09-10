@@ -6,12 +6,12 @@ import (
 	"os"
 	"time"
 
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/codelocation"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/codelocation"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 )
 
 var _ = Describe("JUnit Reporter", func() {

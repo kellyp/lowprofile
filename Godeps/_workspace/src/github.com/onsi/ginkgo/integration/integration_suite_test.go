@@ -7,9 +7,9 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/gexec"
 
 	"testing"
 	"time"

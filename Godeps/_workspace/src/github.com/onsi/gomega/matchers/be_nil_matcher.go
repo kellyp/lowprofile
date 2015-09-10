@@ -1,6 +1,6 @@
 package matchers
 
-import "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+import "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
 
 type BeNilMatcher struct {
 }

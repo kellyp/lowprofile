@@ -4,15 +4,15 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/containernode"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/failer"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/spec"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/specrunner"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/containernode"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/failer"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/leafnodes"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/spec"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/specrunner"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/writer"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 )
 
 type ginkgoTestingT interface {

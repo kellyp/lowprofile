@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/DualSpark/lowprofile",
+	"ImportPath": "github.com/kellyp/lowprofile",
 	"GoVersion": "go1.4.2",
 	"Packages": [
 		"./..."

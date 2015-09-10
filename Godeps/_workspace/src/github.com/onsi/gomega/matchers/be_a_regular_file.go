@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
 )
 
 type notARegularFileError struct {

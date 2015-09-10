@@ -1,13 +1,13 @@
 package remote_test
 
 import (
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega"
 
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
-	. "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/remote"
-	st "github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters/stenographer"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/config"
+	. "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/internal/remote"
+	st "github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/reporters/stenographer"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/ginkgo/types"
 	"time"
 )
 
