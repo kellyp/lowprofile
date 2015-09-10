@@ -10,7 +10,7 @@ Installation is super simple, we are using [Brew](http://brew.sh).
 
 ```bash
 $ brew update
-$ brew install lowprofile
+$ brew install lowprofile.rb
 ```
 
 After the brew install finishes you will be advised to update your zshrc or bash_profile with the following:
