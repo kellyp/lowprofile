@@ -2,7 +2,7 @@
 
 Simple profile management for AWS.
 
-[![Build Status](https://ci.dualspark.com/api/badge/github.com/DualSpark/lowprofile/status.svg?branch=master)](https://ci.dualspark.com/github.com/DualSpark/lowprofile)
+[![Build Status](https://ci.kellyp.com/api/badge/github.com/kellyp/lowprofile/status.svg?branch=master)](https://ci.kellyp.com/github.com/kellyp/lowprofile)
 
 ## Install
 

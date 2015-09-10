@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/DualSpark/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
+	"github.com/kellyp/lowprofile/Godeps/_workspace/src/github.com/onsi/gomega/format"
 	"reflect"
 )
 

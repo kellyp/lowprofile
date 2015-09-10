@@ -3,14 +3,14 @@ require "language/go"
 class Lowprofile < Formula
   desc ""
   homepage ""
-  url "https://github.com/kellyp/lowprofile/archive/9cb7b4a36b5a0559c4aa1781d9320c5dcd17da34.tar.gz"
+  url "https://github.com/kellyp/lowprofile/archive/v0.1.tar.gz"
   version "0.1"
-  sha256 "64109b05badf2fe7000e9e73ce02f3cdbaf4066946c1c193e0e513633e40d021"
+  sha256 "056834b644ea01b2244babb13ed462077d1df6361524f124df0c3f31639db938"
 
   depends_on "go" => :build
 
   go_resource "github.com/kellyp/lowprofile" do
-    url "https://github.com/kellyp/lowprofile.git", :revision => "9cb7b4a36b5a0559c4aa1781d9320c5dcd17da34"
+    url "https://github.com/kellyp/lowprofile.git", :tag => "v0.1"
   end
 
   def install
@@ -27,7 +27,7 @@ class Lowprofile < Formula
   def caveats; <<-EOS.undent
     Add the following to your bash_profile or zshrc to complete the install:
 
-      . /usr/local/etc/lowprofile
+      . #{HOMEBREW_PREFIX}/etc/lowprofile
 
     and source the file to pick up the change.
 
