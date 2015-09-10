@@ -2,7 +2,7 @@
 
 Simple profile management for AWS.
 
-[![Build Status](https://ci.kellyp.com/api/badge/github.com/kellyp/lowprofile/status.svg?branch=master)](https://ci.kellyp.com/github.com/kellyp/lowprofile)
+[![Build Status](https://travis-ci.org/kellyp/lowprofile.svg?branch=master)](https://travis-ci.org/kellyp/lowprofile)
 
 ## Install
 
