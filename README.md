@@ -9,6 +9,8 @@ Simple profile management for AWS.
 Installation is super simple, we are using [Brew](http://brew.sh).
 
 ```bash
+$ git clone https://github.com/kellyp/lowprofile.git
+$ cd lowprofile
 $ brew update
 $ brew install lowprofile.rb
 ```
