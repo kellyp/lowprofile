@@ -1,0 +1,58 @@
+#! /bin/bash
+
+
+lowprofile () {
+PROFILE=""
+
+COMMAND=""
+while (( $# )); do
+  case "$1" in
+    -p|--profile)
+      PROFILE=$2
+      shift 2
+      ;;
+    --) # end argument parsing
+      shift
+      break
+      ;;
+    -*|--*=) # unsupported flags
+      echo "Error: Unsupported flag $1" >&2
+      exit 1
+      ;;
+    *) # preserve positional arguments
+      COMMAND="$1"
+      shift
+      ;;
+  esac
+done
+
+if [[ -z $COMMAND ]]; then
+  echo "Come on! I can do activate, describe, list and delete"
+  return 1
+fi
+
+case "$COMMAND" in
+  describe)
+    echo "The current profile is $AWS_PROFILE"
+    ;;
+  activate)
+    if [[ -z $PROFILE ]]; then
+      echo "Come on! I can't activate without a profile!"
+      return 1
+    fi
+    echo "Activating the $PROFILE profile"
+    export AWS_PROFILE=$PROFILE
+    ;;
+  deactivate)
+    echo "Deactivating the $AWS_PROFILE profile"
+    unset AWS_PROFILE
+    ;;
+  list)
+    echo "Looking for profiles in $HOME/.aws"
+    cat $HOME/.aws/config
+    ;;
+  *)
+    echo "Come on! I can do activate, describe, list and deactivate"
+    ;;
+esac
+}
