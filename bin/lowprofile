@@ -49,7 +49,7 @@ case "$COMMAND" in
     ;;
   list)
     echo "Looking for profiles in $HOME/.aws"
-    cat $HOME/.aws/config
+    cat $HOME/.aws/config | grep 'profile\s'
     ;;
   *)
     echo "Come on! I can do activate, describe, list and deactivate"

@@ -1,14 +1,15 @@
 class Lowprofile < Formula
-  desc ""
-  homepage ""
+  desc "Allows for easy switching between AWS profiles"
+  homepage "https://github.com/kellyp/lowprofile"
   url "https://github.com/kellyp/lowprofile/archive/v0.2.0.tar.gz"
-  version "0.2.0"
-  sha256 "42e015d4977a27298d58bd6d3735a456af9e77b78bbacc0a37752c9c3c6ff7cf"
+  version "0.2.1"
+  sha256 ""
 
   depends_on "jq"
+  depends_on "grep"
 
   def install
-    bin.install Dir["etc/lowprofile"]
+    bin.install Dir["bin/lowprofile"]
   end
 
   def caveats; <<-EOS
