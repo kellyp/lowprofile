@@ -3,16 +3,18 @@ class Lowprofile < Formula
   homepage ""
   url "https://github.com/kellyp/lowprofile/archive/v0.2.0.tar.gz"
   version "0.2.0"
-  sha256 "fa4e89e04bc9b2b71785278bbd26109714371d87b14b6657fe5f1da907035a4b"
+  sha256 "42e015d4977a27298d58bd6d3735a456af9e77b78bbacc0a37752c9c3c6ff7cf"
+
+  depends_on "jq"
 
   def install
-    etc.install Dir["etc/*"]
+    bin.install Dir["etc/lowprofile"]
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<-EOS
     Add the following to your bash_profile or zshrc to complete the install:
 
-      . #{HOMEBREW_PREFIX}/etc/lowprofile
+      . #{HOMEBREW_PREFIX}/bin/lowprofile
 
     and source the file to pick up the change.
 
