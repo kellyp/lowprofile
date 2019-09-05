@@ -1,7 +1,7 @@
 class Lowprofile < Formula
   desc "Allows for easy switching between AWS profiles"
   homepage "https://github.com/kellyp/lowprofile"
-  url "https://github.com/kellyp/lowprofile/archive/v0.2.1.tar.gz"
+  url "https://github.com/kellyp/lowprofile/archive/v0.3.0.tar.gz"
   version "0.2.1"
   sha256 "01d96374579a6b3553b3cc8df85675eb3c761bc0329f9905dd209fbdf90a4373"
 
