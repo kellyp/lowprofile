@@ -3,7 +3,7 @@ class Lowprofile < Formula
   homepage "https://github.com/kellyp/lowprofile"
   url "https://github.com/kellyp/lowprofile/archive/v0.4.0.tar.gz"
   version "0.4.0"
-  sha256 "80ee9387875a9507ddfa61f5cc6a331a178d6d570ea61b1a928d3a71aa0a0fca"
+  sha256 "49b65bd26f2def593063bec5bea186ddb1cc46b80c7593abb5707720fe3488d2"
 
   depends_on "jq"
   depends_on "grep"
