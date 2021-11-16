@@ -12,7 +12,7 @@ Installation is super simple, we are using [Brew](http://brew.sh).
 $ git clone https://github.com/kellyp/lowprofile.git
 $ cd lowprofile
 $ brew update
-$ brew install lowprofile.rb
+$ brew install --formula lowprofile.rb
 ```
 
 After the brew install finishes you will be advised to update your zshrc or bash_profile with the following:
