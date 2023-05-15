@@ -42,17 +42,25 @@ case "$COMMAND" in
     fi
     access=$(awk -F= '/\[/{prefix=$0; next} $1{$1=$1; print prefix $0}' OFS=' = ' ~/.aws/credentials | egrep "\[$PROFILE\]aws_access_key" | awk -F= '{print $2}' | xargs)
     secret=$(awk -F= '/\[/{prefix=$0; next} $1{$1=$1; print prefix $0}' OFS=' = ' ~/.aws/credentials | egrep "\[$PROFILE\]aws_secret_access_key" | awk -F= '{print $2}' | xargs)
+    session=$(awk -F= '/\[/{prefix=$0; next} $1{$1=$1; print prefix $0}' OFS=' = ' ~/.aws/credentials | egrep "\[$PROFILE\]aws_session_token" | awk -F= '{print $2}' | xargs)
     export AWS_PROFILE=$PROFILE
     export AWS_ACCESS_KEY_ID=$access
     export AWS_SECRET_ACCESS_KEY=$secret
-    account=$(aws iam get-user | jq -r .User.Arn | grep -Eo '\d{12}')
-    echo "Activating the $PROFILE profile, for account $account"
+    if [[ -z $session ]]; then
+      echo "No session token detected"
+    else
+      export AWS_SESSION_TOKEN=$session
+    fi
+
+    # account=$(aws iam get-user | jq -r .User.Arn | grep -Eo '\d{12}')
+    # echo "Activating the $PROFILE profile, for account $account"
     ;;
   deactivate)
     echo "Deactivating the $AWS_PROFILE profile"
     unset AWS_PROFILE
     unset AWS_ACCESS_KEY_ID
     unset AWS_SECRET_ACCESS_KEY
+    unset AWS_SESSION_TOKEN
     ;;
   list)
     echo "Looking for profiles in $HOME/.aws"
